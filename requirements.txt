@@ -1,2 +1,2 @@
-requests~=2.18
-peewee~=3.5
+requests==2.18.4
+peewee==3.5
