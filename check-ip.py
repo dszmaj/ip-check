@@ -50,9 +50,9 @@ if __name__ == '__main__':
             config['emaillabs']['SECRET']
         ),
         json={
-            'to': [
-                config['smtp']['RECEPIENT'],
-            ],
+            'to': {
+                config['smtp']['RECEPIENT']: '',
+            },
             'smtp_account': config['emaillabs']['ACCOUNT'],
             'subject': 'Nowy adres IP koparki',
             'text': 'abcd',
@@ -60,4 +60,4 @@ if __name__ == '__main__':
         }
     )
     
-    pprint(r.content.decode())
+    pprint(json.loads(r.content.decode()))
